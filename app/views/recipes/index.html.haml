@@ -1,0 +1,7 @@
+.row
+	- @recipes.each do |rec|
+		.col-md-4
+			=link_to recipe_path(rec) do
+				= image_tag rec.image_url , class: "image_size"
+				%h2= rec.title
+
